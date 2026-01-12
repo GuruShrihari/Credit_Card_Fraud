@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react'
 import axios from 'axios'
 import { CheckCircle, XCircle, TrendingUp, Target, Zap } from 'lucide-react'
 
-const API_URL = import.meta.env.VITE_API_URL || 'http://localhost:8000'
+const API_URL = import.meta.env.production.VITE_API_URL || 'https://credit-card-fraud-z6ac.onrender.com'
 
 const Model = () => {
   const [modelInfo, setModelInfo] = useState(null)
