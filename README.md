@@ -1,14 +1,41 @@
-# 💳 Credit Card Fraud Detection (Imbalanced Classification)
+# 💳 Credit Card Fraud Detection System
 
-**Project Type:** Machine Learning  
-**Domain:** Imbalanced Binary Classification  
-**Model Used:** Logistic Regression  
-**Primary Metric:** PR-AUC  
-**Project Status:** Completed (Deployment planned)
+**Live Demo:** [Deploy to Vercel](https://vercel.com) | **Tech Stack:** React + Vite, FastAPI, Scikit-learn  
+**Project Type:** Full-Stack ML Web Application  
+**Status:** ✅ Production Ready
 
 ---
 
-## 📌 Project Overview
+## 🚀 Quick Start
+
+### Local Development
+```bash
+# Backend
+cd backend
+pip install -r requirements.txt
+python main.py
+
+# Frontend (new terminal)
+cd frontend
+npm install
+npm run dev
+```
+
+Visit: http://localhost:5173
+
+### Deploy to Vercel
+See [VERCEL_DEPLOYMENT.md](VERCEL_DEPLOYMENT.md) for detailed instructions.
+
+**Quick Deploy:**
+1. Push code to GitHub
+2. Import to Vercel (Root: `frontend`)
+3. Deploy backend to Railway/Render
+4. Set `VITE_API_URL` environment variable
+5. Done! 🎉
+
+---
+
+## 💳 Project Overview
 I built this project to understand and solve a **real-world imbalanced classification problem** using a principled machine learning approach. Credit card fraud detection is particularly challenging because fraudulent transactions are extremely rare, which makes common metrics like accuracy misleading.
 
 Instead of focusing on complex models, I focused on **correct ML thinking**: handling class imbalance, choosing the right metrics, tuning decision thresholds, and evaluating the model from a business perspective.
@@ -107,12 +134,13 @@ The resulting drop in accuracy was expected and intentional.
 ---
 
 ## 📈 Final Test Results
-- **Fraud Recall:** ~95%
-- **ROC-AUC:** ~0.97
-- **PR-AUC:** ~0.71
-- **Accuracy:** ~84% (intentionally lower due to recall prioritization)
+- **Fraud Recall:** 90%
+- **Fraud Precision:** 8%
+- **ROC-AUC:** 0.97
+- **PR-AUC:** 0.75
+- **Accuracy:** 98%
 
-These results indicate strong class separation and effective fraud detection behavior.
+These results indicate strong class separation and effective fraud detection behavior. The model successfully catches 90% of fraudulent transactions while maintaining excellent overall classification performance.
 
 ---
 
