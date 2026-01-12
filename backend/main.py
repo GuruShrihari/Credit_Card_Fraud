@@ -18,7 +18,6 @@ app = FastAPI(
 )
 
 # Enable CORS for frontend
-# Add your production frontend URL to allow_origins when deployed
 app.add_middleware(
     CORSMiddleware,
     allow_origins=[
@@ -27,8 +26,10 @@ app.add_middleware(
         "https://credit-card-fraud-two.vercel.app"
     ],
     allow_credentials=True,
-    allow_methods=["*"],
+    allow_methods=["GET", "POST", "OPTIONS"],
     allow_headers=["*"],
+    expose_headers=["*"],
+    max_age=3600,
 )
 
 # Load trained model
