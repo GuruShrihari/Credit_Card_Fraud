@@ -1,12 +1,31 @@
 # 💳 Credit Card Fraud Detection System
 
-**Live Demo:** [Deploy to Vercel](https://vercel.com) | **Tech Stack:** React + Vite, FastAPI, Scikit-learn  
+**Live Demo:** [https://credit-card-fraud-two.vercel.app](https://credit-card-fraud-two.vercel.app)  
+**Backend API:** [https://credit-card-fraud-z6ac.onrender.com](https://credit-card-fraud-z6ac.onrender.com)  
+**Tech Stack:** React + Vite, FastAPI, Scikit-learn  
 **Project Type:** Full-Stack ML Web Application  
-**Status:** ✅ Production Ready
+**Status:** ✅ Deployed & Live
+
+---
+
+## 🌐 Live Application Features
+
+The deployed application includes:
+- **Home Page:** Project overview and key metrics visualization
+- **Live Detection:** Real-time fraud prediction with interactive form
+- **Model Insights:** Detailed model performance metrics and evaluation
+- **Dashboard:** Visual analytics and statistics
+- **About:** Project methodology and technical approach
+
+### Try It Live
+Visit [https://credit-card-fraud-two.vercel.app](https://credit-card-fraud-two.vercel.app) to test the fraud detection system with sample transactions.
 
 ---
 
 ## 🚀 Quick Start
+
+### View Live Application
+**Production:** [https://credit-card-fraud-two.vercel.app](https://credit-card-fraud-two.vercel.app)
 
 ### Local Development
 ```bash
@@ -23,15 +42,31 @@ npm run dev
 
 Visit: http://localhost:5173
 
-### Deploy to Vercel
-See [VERCEL_DEPLOYMENT.md](VERCEL_DEPLOYMENT.md) for detailed instructions.
+---
 
-**Quick Deploy:**
-1. Push code to GitHub
-2. Import to Vercel (Root: `frontend`)
-3. Deploy backend to Railway/Render
-4. Set `VITE_API_URL` environment variable
-5. Done! 🎉
+## 🛠️ Deployment Architecture
+
+### Frontend (Vercel)
+- **Platform:** Vercel
+- **Framework:** React + Vite
+- **URL:** https://credit-card-fraud-two.vercel.app
+- **Build Command:** `npm run build`
+- **Output Directory:** `dist`
+
+### Backend (Render)
+- **Platform:** Render
+- **Framework:** FastAPI
+- **URL:** https://credit-card-fraud-z6ac.onrender.com
+- **Start Command:** `uvicorn main:app --host 0.0.0.0 --port 8000`
+
+### API Endpoints
+- `GET /` - Health check
+- `POST /predict` - Fraud prediction
+- `GET /model-info` - Model metrics
+- `GET /feature-importance` - Feature analysis
+- `GET /statistics` - Dataset statistics
+
+For detailed deployment instructions, see [VERCEL_DEPLOYMENT.md](VERCEL_DEPLOYMENT.md).
 
 ---
 
@@ -144,25 +179,25 @@ These results indicate strong class separation and effective fraud detection beh
 
 ---
 
-## 🔎 Model Explainability
-To maintain transparency:
-- I analyzed Logistic Regression coefficients
-- Identified which features contributed most to fraud prediction
+## �️ Full-Stack Implementation
 
-This aligns with real-world financial systems where explainability is important.
+### Frontend Features
+- **Interactive Dashboard:** Real-time fraud detection with visual feedback
+- **Model Insights:** Performance metrics and evaluation visualizations
+- **Responsive Design:** Built with React, Vite, and Tailwind CSS
+- **Live API Integration:** Connected to FastAPI backend on Render
 
----
+### Backend API
+- **FastAPI Framework:** High-performance REST API
+- **ML Pipeline:** Scikit-learn model with StandardScaler and oversampling
+- **Production-Ready:** Deployed on Render with automatic model loading
+- **CORS Enabled:** Secure cross-origin requests from Vercel frontend
 
-## 🖥️ Deployment Mindset (Future Work)
-I have not built a web interface yet, but this project was designed with deployment in mind.
-
-Planned next steps:
-- Build a lightweight web interface using Flask or FastAPI
-- Allow manual entry of transaction features
-- Display fraud probability and decision based on the tuned threshold
-- Demonstrate end-to-end model usage
-
-The web interface will serve as a **demo layer**, while the core value remains in the ML pipeline and evaluation logic.
+### Deployment
+- **Frontend:** Vercel (CI/CD from GitHub)
+- **Backend:** Render (Auto-deploy from GitHub)
+- **Model:** Exported using pickle, loaded at server startup
+- **Monitoring:** Health checks and error handling
 
 ---
 
@@ -171,6 +206,7 @@ The web interface will serve as a **demo layer**, while the core value remains i
 - PR-AUC is the most informative metric for fraud detection
 - Threshold selection is a business decision, not a fixed rule
 - Simple models with correct evaluation outperform complex models used incorrectly
+- **Full-stack ML deployment:** Successfully deployed end-to-end on Vercel and Render
 
 ---
 
@@ -180,4 +216,37 @@ The web interface will serve as a **demo layer**, while the core value remains i
 - Use SHAP for enhanced explainability
 - Cross-validated threshold optimization
 - Extend to a two-stage detection system
+- Add user authentication and transaction history tracking
+- Implement batch prediction API endpoint
+- Add monitoring and logging for production insights
 
+---
+
+## 📚 Project Structure
+```
+Credit_Card_Fraud/
+├── backend/              # FastAPI backend
+│   ├── main.py          # API endpoints
+│   ├── model.pkl        # Trained ML model
+│   └── requirements.txt # Python dependencies
+├── frontend/            # React + Vite frontend
+│   ├── src/
+│   │   ├── pages/       # Page components
+│   │   └── components/  # Reusable UI components
+│   └── package.json
+├── Credit_Card.ipynb    # ML pipeline & training
+├── creditcard.csv       # Dataset
+└── README.md
+```
+
+---
+
+## 🤝 Contributing
+Feel free to fork this project and submit pull requests for improvements or bug fixes.
+
+## 📝 License
+This project is open source and available for educational purposes.
+
+---
+
+**Built with ❤️ using React, FastAPI, and Scikit-learn**
